@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Anil Maharjan",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 80.9,
+      "left": -246.6,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "board-ili9341-cap-touch",
+      "id": "lcd1",
+      "top": -58.88,
+      "left": 43.14,
+      "rotate": 90,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    ["esp:TX0", "$serialMonitor:RX", "", []],
+    ["esp:RX0", "$serialMonitor:TX", "", []],
+    ["lcd1:GND", "esp:GND.1", "black", ["h-316.8", "v201.6", "h86.3"]],
+    ["lcd1:CS", "esp:D22", "green", ["h-76.8", "v192", "h-38.7"]],
+    ["lcd1:RST", "esp:D32", "green", []],
+    ["lcd1:D/C", "esp:D25", "green", []],
+    ["lcd1:SCK", "esp:D12", "green", []],
+    ["lcd1:MISO", "esp:D33", "green", []],
+    ["lcd1:MOSI", "esp:D27", "green", []],
+    ["esp:VIN", "lcd1:VCC", "red", ["v-96", "h326.4"]]
+  ],
+  "dependencies": {}
+}
